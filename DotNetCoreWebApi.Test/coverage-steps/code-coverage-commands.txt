@@ -1,0 +1,9 @@
+﻿Steps to view code coverage:
+
+1. cd DotNetCoreWebApi.Test
+2. run command: dotnet tool install -g dotnet-reportgenerator-globaltool (run this if your machine is not installed yet)
+3. run command: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+4. run command: reportgenerator -reports:"coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:Html
+5. open in web browser: /DotNetCoreWebApi.Test/coveragereport/index.html
+
+//RUN step 3-4  if you want to refresh into updated code coverage
